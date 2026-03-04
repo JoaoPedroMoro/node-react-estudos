@@ -1,0 +1,17 @@
+export default [
+    {id: 1, nome: "Notebook", preco: 3500.00},
+    {id: 2, nome: "Mouse", preco: 50.00},
+    {id: 3, nome: "Teclado", preco: 100.00},
+    {id: 4, nome: "Monitor", preco: 800.00},
+    {id: 5, nome: "Impressora", preco: 500.00},
+    {id: 6, nome: "Cadeira", preco: 300.00},
+    {id: 7, nome: "Mesa", preco: 400.00},
+    {id: 8, nome: "Headset", preco: 200.00},
+    {id: 9, nome: "Webcam", preco: 150.00},
+    {id: 10, nome: "Microfone", preco: 250.00},
+    {id: 11, nome: "Pen Drive", preco: 80.00},
+    {id: 12, nome: "HD Externo", preco: 600.00},
+    {id: 13, nome: "Placa de Vídeo", preco: 1200.00},
+    {id: 14, nome: "Processador", preco: 900.00},
+    {id: 15, nome: "Memória RAM", preco: 400.00},
+]
