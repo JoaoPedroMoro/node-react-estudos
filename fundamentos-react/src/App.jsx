@@ -16,6 +16,7 @@ import ParOuImpar from './components/condicional/ParOuImpar';
 import UsuarioInfo from './components/condicional/UsuarioInfo';
 import DiretaPai from './components/comunicacao/DiretaPai';
 import IndiretaPai from './components/comunicacao/IndiretaPai';
+import Input from './components/formulario/input';
 
 // export default function (props) {
 // export default (props) => {
@@ -30,11 +31,14 @@ export default _ => {
 
         <div className="Cards">
 
+            <Card titulo="#11 - Componente Controlado" color="#65ca65">
+                <Input></Input>
+            </Card>
+            
             <Card titulo="#10 - Comunicação Indireta" color="#9c6217">
                 <IndiretaPai></IndiretaPai>
             </Card>
             
-
             <Card titulo="#09 - Comunicação Direta" color="#32424b">
                 <DiretaPai></DiretaPai>
             </Card>
