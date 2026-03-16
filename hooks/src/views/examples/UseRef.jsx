@@ -2,15 +2,37 @@ import React, { useEffect, useRef, useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
 
+// const merge = function(s1, s2) {
+//     return [...s1].map(function(e, i) {
+//         return `${e}${s2[i] || ''}`
+//     }).join('')
+// }
+
+const merge = function(s1, s2) {
+    return [...s1].map((e, i) => `${e}${s2[i] || ""}`).join("")
+}
+
 const UseRef = (props) => {
     const [value1, setValue1] = useState('')
+    const [value2, setValue2] = useState('')
     const contador = useRef(0)
+    const input1 = useRef(null)
+    const input2 = useRef(null)
+
+    // useEffect(function() {
+    //     contador.current = contador.current + 1
+    // }, [value1, value2])
 
     useEffect(function() {
         contador.current = contador.current + 1
+        input2.current.focus()
     }, [value1])
 
-    // contador.current = contador.current + 1
+    useEffect(function() {
+        contador.current++
+        input1.current.focus()
+    }, [value2])
+
 
     return (
         <div className="UseRef">
@@ -23,12 +45,21 @@ const UseRef = (props) => {
             <div className="center">
                 <div>
                     <span className="text">Valor: </span>
-                    <span className="text">{value1} [</span>
+                    <span className="text">{merge(value1, value2)}</span>
+                    <span className="text"> [</span>
                     <span className="text red">{contador.current}</span>
                     <span className="text">]</span>
                 </div>
                 <input type="text" className="text"
+                ref={input1}
                 value={value1} onChange={e => setValue1(e.target.value)} />
+            </div>
+
+            <SectionTitle title="Exercício #02" />
+            <div className="center">
+                    <input type="text" className="input"
+                    ref={input2}
+                    value={value2} onChange={e => setValue2(e.target.value)} />
             </div>
         </div>
     )
